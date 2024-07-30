@@ -1,0 +1,19 @@
+---
+interface Props {
+    number: string
+    word: string
+}
+const { number, word } = Astro.props
+---
+<div class="bg-secundario border border-terciario rounded-xl flex flex-col justify-center gap-2 relative p-2 overflow-hidden">
+    <p class="text-5xl font-semibold text-neutral-300 flex items-center justify-center">
+        {number}<span class="text-central-400 text-3xl font-bold">+</span>
+    </p>
+    <p class="relative z-20 bg-terciario rounded-full p-1 flex justify-center w-full gap-x-1 border border-cuaternario">
+        <slot name="icon" />
+        <span class="truncate">
+            {word}
+        </span>
+    </p>
+    <div class="absolute inset-0 z-10 [background:linear-gradient(0deg,#191919_40%,#19191910)_80%]"></div>
+</div>

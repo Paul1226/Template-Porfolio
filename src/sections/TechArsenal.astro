@@ -1,0 +1,12 @@
+---
+import HeaderCards from "../components/HeaderCards.astro"
+
+// icons
+import Stacks from "../../public/icons/Stacks.astro"
+---
+<article class="bg-secundario col-span-5 row-span-3 rounded-xl py-4 border border-terciario order-5 md:order-1 md:col-span-2 md:row-span-2">
+    <HeaderCards title="Tech Arsenal" subtitle="My Stacks">
+        <Stacks class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+    <div class="w-full slider infinite"></div>
+</article>

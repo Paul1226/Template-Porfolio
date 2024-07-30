@@ -1,0 +1,14 @@
+---
+interface Props {
+    title: string
+    subtitle: string
+}
+const { title, subtitle } = Astro.props
+---
+<header class="">
+    <h3 class="flex items-center justify-center gap-x-2 pb-1">
+        <slot name="icon" />
+        <span class="text-neutral-400 font-medium">{subtitle}</span>
+    </h3>
+    <h2 class="text-lg font-bold text-center">{title}</h2>
+</header>

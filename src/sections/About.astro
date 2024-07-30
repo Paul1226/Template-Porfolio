@@ -1,0 +1,70 @@
+---
+import PersonalLit from "../components/PersonalLit.astro"
+import ButtonsBorder from "../components/ButtonsBorder.astro"
+import Telegram from "../../public/icons/about/Telegram.astro"
+import WhatsApp from "../../public/icons/about/WhatsApp.astro"
+---
+<article class="bg-secundario col-span-5 row-span-5 rounded-xl p-4 border border-terciario order-2 md:order-3 md:col-span-3 md:row-span-3">
+
+    <div class="col-span-2 row-span-2 bg-red-40 flex items-center gap-x-4">
+        <figure
+            class="w-full max-w-[120px] overflow-hidden rounded-xl bg-central-400 relative"
+        >
+            <img
+                class="w-full h-full object-cover scale-125 [filter:drop-shadow(3px_-1px_1px_white)]"
+                src="/imgs/perfil.webp"
+                alt="Imagen de perfil del autor"
+            />
+        </figure>
+        <div class="flex flex-col gap-y-1">
+            <div
+                class="flex items-center gap-x-3 bg-terciario py-2 px-5 rounded-full"
+            >
+                <div class="bg-lime-500 w-2 h-2 rounded-full relative z-10 before:content-[''] before:w-2 before:h-2 before:bg-lime-500/20 before:absolute before:rounded-full before:inset-0 before:[animation:spin_2s_linear_infinite_alternate]"></div>
+                <span class="text-neutral-400 font-medium"
+                    >Available To Work</span
+                >
+            </div>
+            <h1 class="text-2xl font-semibold">PaulDev</h1>
+            <p class="text-neutral-400 font-medium">
+                I'm a
+                <span
+                    class="text-central-400 text-base font-semibold inline-block align-middle"
+                    >Developer!</span
+                >
+            </p>
+        </div>
+    </div>
+
+    <div class="col-span-2 row-span-2 bg-terciario/60 rounded-xl p-4">
+        <PersonalLit />
+    </div>
+
+    <ButtonsBorder text="Telegram Me" href="#">
+        <Telegram 
+            class="w-5 fill-central-400"
+            slot="icon"
+        />
+    </ButtonsBorder>
+    <ButtonsBorder text="WhatsApp Me" href="#">
+        <WhatsApp 
+            class="w-5 fill-central-400"
+            slot="icon"
+        />
+    </ButtonsBorder>
+</article>
+
+<style>
+    article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1rem;
+    }
+
+    @keyframes spin {
+        100% {
+            scale: 2.25;
+        }
+    }
+</style>

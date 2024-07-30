@@ -1,0 +1,57 @@
+---
+import Person from "../../public/icons/Person.astro"
+import Works from "../../public/icons/Works.astro"
+import NavServices from "../../public/icons/NavServices.astro"
+
+const nav = ['about', 'works', 'services']
+---
+<nav class="bg-secundario p-2 col-span-5 rounded-xl border border-terciario md:hidden order-1">
+    <ul class="grid grid-cols-3 gap-x-2">
+        <li>
+            <a 
+                href="/"
+            >
+                <Person class="w-5 fill-central-50" />
+                <span>About</span>
+            </a>
+        </li>
+        <li>
+            <a 
+                href="/Works"
+                rel="noopener noreferrer"
+            >
+                <Works class="w-5 fill-central-50" />
+                <span>Works</span>
+            </a>
+        </li>
+        <li>
+            <a 
+                href="/Services"
+                rel="noopener noreferrer"
+            >
+                <NavServices class="w-5 fill-central-50" />
+                <span>Services</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    ul li a {
+        @apply flex items-center justify-center gap-x-1 py-3 rounded-lg font-medium duration-300 ease-in-out bg-terciario hover:bg-bgHover;
+        
+    }
+
+    ul li a.active {
+        @apply text-secundario bg-central-400;
+        svg{
+            @apply fill-secundario;
+        }
+    }
+</style>
+
+<script>
+    const primero : any = document.querySelector('ul li  a')
+
+    primero.classList.add('active')
+</script>

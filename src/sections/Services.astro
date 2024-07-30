@@ -1,0 +1,12 @@
+---
+import HeaderCards from "../components/HeaderCards.astro"
+
+// icons
+import NavServices from "../../public/icons/NavServices.astro"
+---
+<article class="bg-secundario col-span-5 row-span-3 rounded-xl py-4 border border-terciario order-7 md:order-5 md:col-span-2 md:row-span-2">
+    <HeaderCards title="Solution Suite" subtitle="Services">
+        <NavServices class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+    <div class="w-full slider infinite"></div>
+</article>

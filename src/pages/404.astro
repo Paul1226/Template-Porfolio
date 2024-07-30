@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Pared from "../../public/icons/404Icons/Pared.astro";
+import Enchufe from "../../public/icons/404Icons/Enchufe.astro";
+
+import Twitter404 from "../../public/icons/404Icons/Twitter404.astro";
+import Instagram404 from "../../public/icons/404Icons/Instagram404.astro";
+import Linkedin404 from "../../public/icons/404Icons/Linkedin404.astro";
+
+---
+
+<Layout title="404">
+    <section class="grid grid-cols-4 grid-rows-3 gap-4 py-5">
+        <article class="col-span-4 flex justify-center items-center gap-x-2">
+            <figure
+                class="w-full max-w-[100px] overflow-hidden rounded-xl bg-central-400 relative"
+            >
+                <img
+                    class="w-full h-full object-cover scale-125 [filter:drop-shadow(3px_-1px_1px_white)]"
+                    src="/imgs/perfil.webp"
+                    alt="Imagen de perfil del autor"
+                />
+            </figure>
+
+            <div class="c">
+                <h1 class="text-2xl font-semibold pb-2">PaulDev</h1>
+                <div class="conicons flex items-center gap-x-2">
+                    <a class="w-8 p-[6px] rounded-md bg-cuaternario transition-transform duration-300 ease-in-out hover:translate-y-[-3px]" href="#" target="_blank">
+                        <Twitter404 class="w-full fill-neutral-300" />
+                    </a>
+                    <a class="w-8 p-[6px] rounded-md bg-cuaternario transition-transform duration-300 ease-in-out hover:translate-y-[-3px]" href="#" target="_blank">
+                        <Instagram404 class="w-full fill-neutral-300" />
+                    </a>
+                    <a class="w-8 p-[6px] rounded-md bg-cuaternario transition-transform duration-300 ease-in-out hover:translate-y-[-3px]" href="#" target="_blank">
+                        <Linkedin404 class="w-full fill-neutral-300" />
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="col-span-4 row-span-2 rounded-3xl bg-secundario overflow-hidden relative">
+            <Pared class="w-full h-full fill-terciario object-cover relative z-10" />
+            <div class="absolute top-5 left-1/2 -translate-x-1/2 w-[250px] z-[9]">
+                <Enchufe class="w-full h-full fill-central-400 object-cover" />
+            </div>
+            <div class="absolute inset-0 z-20 [background:linear-gradient(0deg,#191919,#19191910)]"></div>
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex flex-col gap-y-2 items-center">
+                <span class="text-6xl font-bold">404</span>
+                <span class="font-semibold text-neutral-400">Page Not Found</span>
+                <span class="bg-cuaternario w-full p-2 text-center rounded-lg relative h-10 span-link overflow-hidden">
+                    <a
+                        class="bg-central-400 absolute inset-[2px] grid place-content-center rounded-lg z-30 go-home text-neutral-800 font-semibold"
+                        href="/"
+                    >Go Home
+                    </a>
+                </span>
+            </div>
+        </article>
+    </section>
+</Layout>
+
+<style>
+    .span-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        border-radius: inherit;
+        width: 4rem;
+        height: 4rem;
+        background: rgb(255, 255, 255);
+        background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(255, 255, 255, 0.3) 18%,
+            rgba(255, 255, 255, 0) 59%
+        );
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .span-link:has(.go-home:hover)::before {
+        opacity: 1;
+        animation: recorrido 3.5s linear infinite both;
+    }
+
+    @keyframes recorrido {
+        12.5% {
+            top: -2rem;
+        }
+        37.5% {
+            top: -2rem;
+            left: calc(100% - 2rem);
+        }
+        62.5% {
+            top: calc(100% - 2rem);
+            left: calc(100% - 2rem);
+        }
+        87.5% {
+            top: calc(100% - 2rem);
+            left: -2rem;
+        }
+        100% {
+            top: 0rem;
+        }
+    }
+</style>

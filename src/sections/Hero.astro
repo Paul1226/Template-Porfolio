@@ -1,0 +1,27 @@
+---
+import CardHero from "../components/CardHero.astro"
+import Flag from "../../public/icons/Flag.astro"
+import Happy from "../../public/icons/Happy.astro"
+import Star1 from "../../public/icons/Star1.astro"
+import Download from "../../public/icons/about/Download.astro"
+---
+<article class="col-span-5 row-span-3 rounded-xl grid grid-cols-2 grid-rows-2 gap-3 order-3 md:order-2 md:col-span-3 md:grid-cols-3 md:grid-rows-1 md:row-span-1">
+    <CardHero number="56" word="Projects">
+        <Flag class="w-5 fill-central-400" slot="icon"/>
+    </CardHero>
+    <CardHero number="23" word="Happy Clients">
+        <Happy class="w-5 fill-central-400" slot="icon"/>
+    </CardHero>
+    <CardHero number="06" word="Years Expertise">
+        <Star1 class="w-5 fill-central-400" slot="icon"/>
+    </CardHero>
+    <div class="bg-secundario border border-terciario rounded-xl relative p-2 overflow-hidden md:hidden">
+        <a
+            class="w-full h-full flex items-center justify-center font-medium gap-x-2"
+            href="#">Resume
+            <span class="w-10 p-2 bg-cuaternario rounded-lg">
+                <Download class="w-full fill-neutral-300" />
+            </span>
+        </a>
+    </div>
+</article>
