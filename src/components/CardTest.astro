@@ -1,0 +1,47 @@
+---
+interface Props {
+    text: string
+    name: string
+    nacionality: string
+    date: string
+    img: string
+}
+const { text, name, nacionality, date, img } = Astro.props
+---
+
+<article
+    class="flex flex-col bg-smoke-700 w-11/12 rounded-lg border border-smoke-500 card-testimonial md:w-10/12"
+>
+    <header class="flex items-center justify-between border-b border-smoke-500 p-3 font-semibold">
+        <div class="flex items-center gap-x-2">
+            <figure class="w-12 h-12 rounded-lg overflow-hidden">
+                <img
+                    class="w-full bg-smoke-400"
+                    src={img}
+                    alt=`Perfil de ${name}`
+                />
+            </figure>
+            <div class="titu">
+                <h4>{name}</h4>
+                <p class="text-neutral-500 text-[13px]">{nacionality}</p>
+            </div>
+        </div>
+        <div class="date text-neutral-400">
+            <p>{date}</p>
+        </div>
+    </header>
+    <div class="main p-3 inline-block text-pretty text-neutral-400 font-semibold leading-5">
+        {text}
+    </div>
+</article>
+
+<style>
+    article.impar {
+        margin-left: 12px;
+        margin-right: auto;
+    }
+    article.par {
+        margin-right: 12px;
+        margin-left: auto;
+    }
+</style>

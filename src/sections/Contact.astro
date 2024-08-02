@@ -1,0 +1,24 @@
+---
+import ButtonsBorder from "../components/ButtonsBorder.astro"
+
+// icons
+import Email from "../../public/icons/Email.astro"
+import King from "../../public/icons/King.astro"
+---
+<article class="bg-smoke-900 rounded-xl p-4 border border-smoke-700 w-full h-full grid grid-cols-1 grid-rows-2 gap-4">
+    <div class="header flex flex-col justify-center items-center w-full h-full">
+        <figure class="w-14 bg-smoke-500 rounded-full p-[14px] mb-4">
+            <King class="w-full fill-central-400" />
+        </figure>
+        <h3 class="text-base font-bold">Let’s Work Together</h3>
+        <h4 class="text-neutral-500 font-semibold">Let's Make Magic Happen Together!</h4>
+    </div>
+    <div class="flex flex-col gap-3 h-full">
+        <ButtonsBorder text="Email Me" href="mailto:LH5Jh@example.com">
+            <Email class="w-5 fill-central-400" slot="icon" />
+        </ButtonsBorder>
+        <ButtonsBorder text="Email Me" href="mailto:LH5Jh@example.com">
+            <Email class="w-5 fill-central-400" slot="icon" />
+        </ButtonsBorder>
+    </div>
+</article>

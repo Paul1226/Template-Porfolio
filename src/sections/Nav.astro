@@ -5,8 +5,8 @@ import NavServices from "../../public/icons/NavServices.astro"
 
 const nav = ['about', 'works', 'services']
 ---
-<nav class="bg-secundario p-2 col-span-5 rounded-xl border border-terciario md:hidden order-1">
-    <ul class="grid grid-cols-3 gap-x-2">
+<nav class="bg-smoke-900 p-2 rounded-xl border border-smoke-700 md:hidden h-[65px] w-full">
+    <ul class="grid grid-cols-3 gap-x-2 h-full">
         <li>
             <a 
                 href="/"
@@ -38,14 +38,14 @@ const nav = ['about', 'works', 'services']
 
 <style>
     ul li a {
-        @apply flex items-center justify-center gap-x-1 py-3 rounded-lg font-medium duration-300 ease-in-out bg-terciario hover:bg-bgHover;
+        @apply h-full flex items-center justify-center gap-x-1 rounded-lg font-medium duration-300 ease-in-out bg-smoke-800 hover:bg-smoke-700;
         
     }
 
     ul li a.active {
-        @apply text-secundario bg-central-400;
+        @apply text-smoke-900 bg-central-400;
         svg{
-            @apply fill-secundario;
+            @apply fill-smoke-900;
         }
     }
 </style>

@@ -3,10 +3,67 @@ import HeaderCards from "../components/HeaderCards.astro"
 
 // icons
 import Porfolio from "../../public/icons/Porfolio.astro"
+import ButtonPages from "../components/ButtonPages.astro"
+
+const classImage = "w-[180px] aspect-video rounded-lg"
 ---
-<article class="bg-secundario col-span-5 row-span-3 rounded-xl py-4 border border-terciario order-6 md:order-4 md:col-span-2 md:row-span-2">
+<article class="bg-smoke-900 rounded-xl py-4 border border-smoke-700 order-2 flex flex-col w-full">
     <HeaderCards title="Works Gallery" subtitle="Projects">
         <Porfolio class="w-5 fill-central-400" slot="icon" />
     </HeaderCards>
-    <div class="w-full slider infinite"></div>
+    <div class="w-full h-full bg-red-500/1 flex py-3 relative overflow-hidden">
+        <div class="absolute inset-0 z-10 [background:linear-gradient(0deg,#101010_15%,#10101010)_90%]"></div>
+        <figure
+            class="w-full h-full flex items-center gap-x-3 animate-loop"
+        >
+            <img
+                class={classImage}
+                src="/imgs/header04.jpg" 
+                alt="Imagen de trabajo 04"
+            />
+            <img
+                class={classImage}
+                src="/imgs/header05.jpg" 
+                alt="Imagen de trabajo 05"
+            />
+            <img
+                class={classImage}
+                src="/imgs/header08.jpg" 
+                alt="Imagen de trabajo 08"
+            />
+            <img
+                class={classImage}
+                src="/imgs/header10.jpg" 
+                alt="Imagen de trabajo 10"
+            />
+            <img
+                class={classImage}
+                src="/imgs/header04.jpg" 
+                alt="Imagen de trabajo 04"
+            />
+            <img
+                class={classImage}
+                src="/imgs/header05.jpg" 
+                alt="Imagen de trabajo 05"
+            />
+            <img
+                class={classImage}
+                src="/imgs/header08.jpg" 
+                alt="Imagen de trabajo 08"
+            />
+            <img
+                class={classImage}
+                src="/imgs/header10.jpg" 
+                alt="Imagen de trabajo 10"
+            />
+        </figure>
+
+        <ButtonPages text="View Works" />
+    </div>
 </article>
+
+<style>
+    .animate-loop {
+        --extra-width: 23.125rem;
+    }
+</style>

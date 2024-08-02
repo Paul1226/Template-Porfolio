@@ -15,33 +15,58 @@ import Nav from "../sections/Nav.astro";
 ---
 
 <Layout title="Template - Portfolio | PaulDev">
-	<section class="container">
+	<section class="grid grid-cols-1 grid-row-2 gap-3 2xl:grid-cols-[1.45fr_1fr]">
 		<Nav />
-		<About />
-		<Hero />
-		<Clients />
-		<TechArsenal />
-		<Projects />
-		<Services />
-		<Testimonials />
-		<WorkProcess />
-		<FollowMe />
-		<Contact />
+		<div class="prim h-full">
+			<div class="pri-izq order-1 md:order-2 w-full min-h-[680px] grid grid-cols-1 grid-rows-[auto_auto_1fr] gap-3">
+				<About />
+				<Hero />
+				<Clients />
+			</div>
+			<div class="pri-der order-2 md:order-1 w-full min-h-[680px] grid grid-cols-1 grid-rows-3 gap-3">
+				<TechArsenal />
+				<Projects />
+				<Services />
+			</div>
+		</div>
+
+		<div class="ultimo flex flex-col gap-y-3 h-full">
+			<div class="ultimo-pri grid grid-cols-1 gap-3">
+				<Testimonials />
+				<WorkProcess />
+			</div>
+			<div class="ter grid grid-cols-1 grid-row-2 gap-3">
+				<FollowMe />
+				<Contact />
+			</div>
+		</div>
 	</section>
 </Layout>
 
 <style>
-	.container {
+	.prim {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(21, 1fr);
+		grid-template-columns: 1fr;
 		gap: .75rem;
 	}
+	
 
 	@media screen and (min-width: 810px) {
-		.container {
-			grid-template-rows: repeat(21, 1fr);
+		.prim {
+			grid-template-columns: 1fr 1.45fr;
 		}
-		
+
+		.ultimo-pri {
+			grid-template-columns: 1.45fr 1fr;
+		}
+		.ter {
+			grid-template-columns: 1fr 1.45fr;
+		}
 	}
+
+	/* @media screen and (min-width: 1440px) {
+		.section-main {
+			grid-template-columns: 1.45fr 1fr;
+		}
+	} */
 </style>

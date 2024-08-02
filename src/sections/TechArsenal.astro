@@ -1,12 +1,42 @@
 ---
 import HeaderCards from "../components/HeaderCards.astro"
+import ButtonArsenal from "../components/ButtonArsenal.astro"
 
 // icons
 import Stacks from "../../public/icons/Stacks.astro"
+import Framer from "../../public/icons/Framer.astro"
+import Webflow from "../../public/icons/Webflow.astro"
+import Figma from "../../public/icons/Figma.astro"
+import Shopify from "../../public/icons/Shopify.astro"
 ---
-<article class="bg-secundario col-span-5 row-span-3 rounded-xl py-4 border border-terciario order-5 md:order-1 md:col-span-2 md:row-span-2">
+<article class="bg-smoke-900 rounded-xl pt-4 border border-smoke-700 order-1 overflow-hidden flex flex-col w-full">
     <HeaderCards title="Tech Arsenal" subtitle="My Stacks">
         <Stacks class="w-5 fill-central-400" slot="icon" />
     </HeaderCards>
-    <div class="w-full slider infinite"></div>
+    <div class="grid grid-cols-2 grid-rows-2 p-4 gap-3 h-full">
+        <ButtonArsenal
+            text="Framer"
+            href="#"
+        >
+            <Framer class="w-full fill-neutral-400" slot="icon" />
+        </ButtonArsenal>
+        <ButtonArsenal
+            text="Webflow"
+            href="#"
+        >
+            <Webflow class="w-full fill-neutral-400" slot="icon" />
+        </ButtonArsenal>
+        <ButtonArsenal
+            text="Figma"
+            href="#"
+        >
+            <Figma class="w-full fill-neutral-400" slot="icon" />
+        </ButtonArsenal>
+        <ButtonArsenal
+            text="Shopify"
+            href="#"
+        >
+            <Shopify class="w-full fill-neutral-400" slot="icon" />
+        </ButtonArsenal>
+    </div>
 </article>

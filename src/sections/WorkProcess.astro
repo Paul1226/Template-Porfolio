@@ -1,0 +1,46 @@
+---
+import HeaderCards from "../components/HeaderCards.astro";
+import Star2 from "../../public/icons/workflow/Star2.astro";
+import WorksLit from "../components/WorksLit.astro";
+
+// icons
+import Goals from "../../public/icons/workflow/Goals.astro";
+import Research from "../../public/icons/workflow/Research.astro";
+import Wireframe from "../../public/icons/workflow/Wireframe.astro";
+import Prototyping from "../../public/icons/workflow/Prototyping.astro";
+import Finalize from "../../public/icons/workflow/Finalize.astro";
+---
+
+<article
+    class="bg-smoke-900 rounded-xl pt-4 border border-smoke-700 order-1 flex flex-col relative"
+>
+    <HeaderCards title="Workflow Highlights" subtitle="Work Process">
+        <Star2 class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+    <span class="w-full h-[1px] bg-smoke-500"></span>
+    <ul 
+        class="grid grid-cols-1 grid-rows-[auto_auto_auto_auto_auto] gap-3 p-4 h-full max-h-[350px] overflow-y-auto"
+    >
+        <WorksLit title="Goals & Objetives">
+            <Goals class="w-full fill-central-300" slot="icon"/>
+        </WorksLit>
+        <WorksLit title="Research">
+            <Research class="w-full fill-central-300" slot="icon"/>
+        </WorksLit>
+        <WorksLit title="Wireframe">
+            <Wireframe class="w-full fill-central-300" slot="icon"/>
+        </WorksLit>
+        <WorksLit title="Prototyping">
+            <Prototyping class="w-full fill-central-300" slot="icon"/>
+        </WorksLit>
+        <WorksLit title="Finalize Design">
+            <Finalize class="w-full fill-central-300" slot="icon"/>
+        </WorksLit>
+    </ul>
+</article>
+
+<style>
+    ul {
+        scrollbar-width: none;
+    }
+</style>

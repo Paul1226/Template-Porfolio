@@ -3,12 +3,13 @@ import PersonalLit from "../components/PersonalLit.astro"
 import ButtonsBorder from "../components/ButtonsBorder.astro"
 import Telegram from "../../public/icons/about/Telegram.astro"
 import WhatsApp from "../../public/icons/about/WhatsApp.astro"
+import Download from "../../public/icons/about/Download.astro"
 ---
-<article class="bg-secundario col-span-5 row-span-5 rounded-xl p-4 border border-terciario order-2 md:order-3 md:col-span-3 md:row-span-3">
+<article class="bg-smoke-900 rounded-xl p-4 border border-smoke-700 order-1 md:order-2 w-full min-h-[320px] h-max flex flex-col gap-3">
 
-    <div class="col-span-2 row-span-2 bg-red-40 flex items-center gap-x-4">
+    <div class="bg-red-40 flex items-center gap-4">
         <figure
-            class="w-full max-w-[120px] overflow-hidden rounded-xl bg-central-400 relative"
+            class="w-full max-w-[110px] overflow-hidden rounded-xl bg-central-400 relative"
         >
             <img
                 class="w-full h-full object-cover scale-125 [filter:drop-shadow(3px_-1px_1px_white)]"
@@ -16,14 +17,25 @@ import WhatsApp from "../../public/icons/about/WhatsApp.astro"
                 alt="Imagen de perfil del autor"
             />
         </figure>
-        <div class="flex flex-col gap-y-1">
-            <div
-                class="flex items-center gap-x-3 bg-terciario py-2 px-5 rounded-full"
-            >
-                <div class="bg-lime-500 w-2 h-2 rounded-full relative z-10 before:content-[''] before:w-2 before:h-2 before:bg-lime-500/20 before:absolute before:rounded-full before:inset-0 before:[animation:spin_2s_linear_infinite_alternate]"></div>
-                <span class="text-neutral-400 font-medium"
-                    >Available To Work</span
+        <div class="flex flex-col gap-y-1 w-full">
+
+            <div class="flex items-center justify-between">
+                <div
+                    class="flex items-center gap-x-3 bg-smoke-800 py-2 px-4 rounded-full w-max"
                 >
+                    <div class="bg-lime-500 w-2 h-2 rounded-full relative z-10 before:content-[''] before:w-2 before:h-2 before:bg-lime-500/20 before:absolute before:rounded-full before:inset-0 before:[animation:spin_1s_linear_infinite_alternate]"></div>
+                    <span class="text-neutral-400 font-medium"
+                        >Available To Work</span
+                    >
+                </div>
+                
+                <a
+                    class="w-max h-full items-center justify-center font-medium gap-x-2 text-sm hidden md:flex"
+                    href="#">Resume
+                    <span class="w-10 p-2 bg-smoke-500 rounded-lg">
+                        <Download class="w-full fill-neutral-300" />
+                    </span>
+                </a>
             </div>
             <h1 class="text-2xl font-semibold">PaulDev</h1>
             <p class="text-neutral-400 font-medium">
@@ -36,31 +48,29 @@ import WhatsApp from "../../public/icons/about/WhatsApp.astro"
         </div>
     </div>
 
-    <div class="col-span-2 row-span-2 bg-terciario/60 rounded-xl p-4">
+    <div class="bg-smoke-800 rounded-xl p-3 flex-grow">
         <PersonalLit />
     </div>
 
-    <ButtonsBorder text="Telegram Me" href="#">
-        <Telegram 
+    <div class="w-full h-14 flex items-center gap-3">
+
+        <ButtonsBorder text="Telegram Me" href="#">
+            <Telegram 
             class="w-5 fill-central-400"
             slot="icon"
-        />
-    </ButtonsBorder>
-    <ButtonsBorder text="WhatsApp Me" href="#">
-        <WhatsApp 
+            />
+        </ButtonsBorder>
+        
+        <ButtonsBorder text="WhatsApp Me" href="#">
+            <WhatsApp 
             class="w-5 fill-central-400"
             slot="icon"
-        />
-    </ButtonsBorder>
+            />
+        </ButtonsBorder>
+    </div>
 </article>
 
 <style>
-    article {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 1rem;
-    }
 
     @keyframes spin {
         100% {

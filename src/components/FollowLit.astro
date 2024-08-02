@@ -1,0 +1,31 @@
+---
+import Arrow from "../../public/icons/Arrow.astro";
+
+interface Props {
+    title: string;
+    url: string;
+}
+
+const { title, url } = Astro.props;
+---
+
+<li>
+    <a
+        class="flex flex-col p-2 bg-smoke-700 rounded-xl border border-smoke-600 h-12 overflow-hidden"
+        style="transition: height 0.3s ease-in-out"
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <div class="flex justify-between items-center w-full h-full">
+            <div class="flex items-center gap-2">
+                <figure class="w-9 h-9 p-2 rounded-[10px] bg-smoke-500">
+                    <slot name="icon" />
+                </figure>
+                <span class="text-neutral-500 font-semibold">{title} </span>
+            </div>
+
+            <Arrow class="w-5 fill-neutral-400 mr-2 -rotate-45" />
+        </div>
+    </a>
+</li>

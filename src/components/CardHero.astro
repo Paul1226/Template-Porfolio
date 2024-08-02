@@ -5,15 +5,15 @@ interface Props {
 }
 const { number, word } = Astro.props
 ---
-<div class="bg-secundario border border-terciario rounded-xl flex flex-col justify-center gap-2 relative p-2 overflow-hidden">
-    <p class="text-5xl font-semibold text-neutral-300 flex items-center justify-center">
+<div class="bg-smoke-900 border border-smoke-700 rounded-xl flex flex-col justify-center gap-2 relative p-4 overflow-hidden h-full">
+    <p class="text-[55px] font-semibold text-central-50 flex items-center justify-center pb-2">
         {number}<span class="text-central-400 text-3xl font-bold">+</span>
     </p>
-    <p class="relative z-20 bg-terciario rounded-full p-1 flex justify-center w-full gap-x-1 border border-cuaternario">
+    <p class="relative z-20 bg-smoke-800 rounded-full p-1 flex justify-center w-full gap-x-1 border border-smoke-600">
         <slot name="icon" />
         <span class="truncate">
             {word}
         </span>
     </p>
-    <div class="absolute inset-0 z-10 [background:linear-gradient(0deg,#191919_40%,#19191910)_80%]"></div>
+    <div class="absolute inset-0 z-10 [background:linear-gradient(0deg,#101010_45%,#20202010)_80%]"></div>
 </div>

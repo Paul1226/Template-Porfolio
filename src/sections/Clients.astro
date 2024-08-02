@@ -1,12 +1,20 @@
 ---
-import HeaderCards from "../components/HeaderCards.astro"
+import HeaderCards from "../components/HeaderCards.astro";
 
 // icons
-import Rocket from "../../public/icons/clients/Rocket.astro"
+import Rocket from "../../public/icons/clients/Rocket.astro";
+import ClientsFirst from "../components/ClientsFirst.astro";
+import ClientsSecond from "../components/ClientsSecond.astro";
 ---
-<article class="bg-secundario col-span-5 row-span-3 rounded-xl py-4 border border-terciario order-4 md:order-6 md:col-span-3 md:row-span-2">
+
+<article
+    class="bg-smoke-900 rounded-xl py-4 border border-smoke-700 order-3 flex flex-col w-full h-full"
+>
     <HeaderCards title="Satisfied Partners" subtitle="My Clients">
         <Rocket class="w-5 fill-central-400" slot="icon" />
     </HeaderCards>
-    <div class="w-full slider infinite"></div>
+    <div class="w-full h-full py-5 flex flex-col gap-3 overflow-hidden relative">
+        <!-- <ClientsFirst /> -->
+        <!-- <ClientsSecond /> -->
+    </div>
 </article>

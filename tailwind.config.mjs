@@ -3,6 +3,23 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			keyframes: {
+				loop: {
+					"100%": { transform: "translateX(calc(-100% - var(--extra-width)))" }
+				},
+				"loop-reverse": {
+					"0%": { transform: "translateX(calc(-100% - var(--extra-width)))" },
+					"100%": { transform: "translateX(0)" }
+				},
+				"loop-vertical": {
+					"100%": { transform: "translateY(calc(-100% - var(--extra-height)))" }
+				}
+			},
+			animation: {
+				loop: "loop 20s linear infinite",
+				"loop-reverse": "loop-reverse 20s linear infinite",
+				"loop-vertical": "loop-vertical 20s linear infinite",
+			},
 			colors: {
 				'central': {
 					'50': '#f4f3ff',
@@ -17,15 +34,26 @@ export default {
 					'900': '#3f1a98',
 					'950': '#250e67',
 				},
-				primario: '#050505',
-				secundario: '#101010',
-				terciario: '#191919',
-				cuaternario: '#282828',
-				bgHover: '#1F1F1F'
+				smoke: {
+					'50': '#f6f6f6',
+					'100': '#e7e7e7',
+					'200': '#d1d1d1',
+					'300': '#b0b0b0',
+					'400': '#353535',
+					'500': '#282828',
+					'600': '#252525',
+					'700': '#191919',
+					'800': '#151515',
+					'900': '#101010',
+					'950': '#050505',
+				},
+
+
 			},
 
 			screens: {
 				'md': '810px',
+				'2xl': '1440px',
 			}
 		},
 	},

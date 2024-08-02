@@ -1,0 +1,39 @@
+---
+import Instagram from "../../public/icons/clients/Instagram.astro";
+import Snapchat from "../../public/icons/clients/Snapchat.astro";
+import Dribbble from "../../public/icons/clients/Dribbble.astro";
+import Pinterest from "../../public/icons/clients/Pinterest.astro";
+import Discord from "../../public/icons/clients/Discord.astro";
+
+const clases = "w-20 fill-neutral-400 text-smoke-700";
+const clasesSpan = "w-32 px-3 py-2 bg-smoke-700 rounded-xl border border-smoke-700 text-smoke-700";
+
+---
+
+<div class="relative w-full overflow-hidden">
+    <div
+        class="absolute inset-0 z-10"
+        style="background-image: linear-gradient(90deg, #101010 3%, #10101010 15%, #10101010 85%, #101010 97%);"
+    >
+    </div>
+    <div
+        class="flex items-center gap-3"
+    >
+        <span class={clasesSpan}><Discord class={clases} /></span>
+        <span class={clasesSpan}><Instagram class={clases} /></span>
+        <span class={clasesSpan}><Snapchat class={clases} /></span>
+        <!-- <span class={clasesSpan}><Dribbble class={clases} /></span> -->
+        <!-- <span class={clasesSpan}><Pinterest class={clases} /></span> -->
+        <!-- <span class={clasesSpan}><Discord class={clases} /></span> -->
+        <!-- <span class={clasesSpan}><Instagram class={clases} /></span> -->
+        <!-- <span class={clasesSpan}><Snapchat class={clases} /></span> -->
+        <!-- <span class={clasesSpan}><Dribbble class={clases} /></span> -->
+        <!-- <span class={clasesSpan}><Pinterest class={clases} /></span> -->
+    </div>
+</div>
+
+<style>
+    .animate-loop-reverse {
+        --extra-width: 12rem;
+    }
+</style>

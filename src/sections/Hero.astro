@@ -5,7 +5,7 @@ import Happy from "../../public/icons/Happy.astro"
 import Star1 from "../../public/icons/Star1.astro"
 import Download from "../../public/icons/about/Download.astro"
 ---
-<article class="col-span-5 row-span-3 rounded-xl grid grid-cols-2 grid-rows-2 gap-3 order-3 md:order-2 md:col-span-3 md:grid-cols-3 md:grid-rows-1 md:row-span-1">
+<article class="rounded-xl grid grid-cols-2 grid-rows-2 gap-3 order-2 md:order-1 md:grid-cols-3 md:grid-rows-1 w-full h-min">
     <CardHero number="56" word="Projects">
         <Flag class="w-5 fill-central-400" slot="icon"/>
     </CardHero>
@@ -15,13 +15,23 @@ import Download from "../../public/icons/about/Download.astro"
     <CardHero number="06" word="Years Expertise">
         <Star1 class="w-5 fill-central-400" slot="icon"/>
     </CardHero>
-    <div class="bg-secundario border border-terciario rounded-xl relative p-2 overflow-hidden md:hidden">
+    <div class="bg-smoke-800 border border-smoke-700 rounded-xl relative p-2 overflow-hidden md:hidden transition-colors duration-300 ease-in-out download-card">
         <a
-            class="w-full h-full flex items-center justify-center font-medium gap-x-2"
-            href="#">Resume
-            <span class="w-10 p-2 bg-cuaternario rounded-lg">
+            class="w-full h-full flex items-center justify-center font-medium gap-2 relative z-10"
+            href="/cvs/PaulDev-Porfolio.pdf"
+            download="PaulDev-Porfolio.pdf"
+            target="_blank"
+        >Resume
+            <span class="w-10 p-2 bg-smoke-500 rounded-lg">
                 <Download class="w-full fill-neutral-300" />
             </span>
         </a>
+        <div class="absolute inset-0 [background:linear-gradient(0deg,#101010_5%,#20202010)_60%]"></div>
     </div>
 </article>
+
+<style>
+    .download-card:has(a:hover) {
+        background-color: #202020;
+    }
+</style>

@@ -5,10 +5,10 @@ interface Props {
 }
 const { title, subtitle } = Astro.props
 ---
-<header class="">
-    <h3 class="flex items-center justify-center gap-x-2 pb-1">
+<header class="pb-2">
+    <h3 class="flex items-center justify-center gap-1">
         <slot name="icon" />
         <span class="text-neutral-400 font-medium">{subtitle}</span>
     </h3>
-    <h2 class="text-lg font-bold text-center">{title}</h2>
+    <h2 class="text-base font-bold text-center">{title}</h2>
 </header>

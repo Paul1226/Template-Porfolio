@@ -1,0 +1,22 @@
+---
+interface Props {
+    text: string
+    href: string
+}
+const { text, href } = Astro.props
+
+import Arrow from '../../public/icons/Arrow.astro'
+---
+<a
+    class="flex justify-between items-center bg-smoke-800 p-2 rounded-xl group border border-smoke-700 duration-500 hover:bg-smoke-700"
+    href={href}>
+    <div class="flex items-center gap-1">
+        <figure class="w-8 h-8 bg-smoke-500 p-[5px] rounded-lg">
+            <slot name="icon" />
+        </figure>
+        <span class="text-neutral-400 font-medium">{text}</span>
+    </div>
+    <div class="opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-45">
+        <Arrow class="w-5 fill-neutral-400" />
+    </div>
+</a>

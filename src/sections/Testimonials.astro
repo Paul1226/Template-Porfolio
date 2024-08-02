@@ -1,0 +1,93 @@
+---
+import HeaderCards from "../components/HeaderCards.astro"
+import CardTest from "../components/CardTest.astro"
+
+// icons
+import CatTest from "../../public/icons/CatTest.astro"
+
+const testimonials = [
+    {
+        name: "Sarah Johnson",
+        nacionality: "New York, USA",
+        date: "11, Feb 2024",
+        testimonial: "Pragadesh's design skills are unparalleled. He transformed my vague ideas into a stunning website that perfectly represents my brand.",
+        img: "https://framerusercontent.com/images/eSpKKfJmYVvAPFbGJQAJ5XRn8FE.png"
+    },
+    {
+        name: "David Smith",
+        nacionality: "London, UK",
+        date: "21, Jan 2024",
+        testimonial: "Working with Pragadesh was a breeze. He not only delivered a sleek and functional website but also provided excellent support throughout the process.",
+        img: "https://framerusercontent.com/images/5CJw29IANeoZMtGZ1ADBTCfg.png"
+    },
+    {
+        name: "Emily Chen",
+        nacionality: "Sydney, Australia",
+        date: "09, Feb 2024",
+        testimonial: "Pragadesh exceeded my expectations with his attention to detail and creativity. I'm thrilled with the website he built for my business.",
+        img: "https://framerusercontent.com/images/YH7RqbX8MBbAjCz6CzC4PzS7lCg.png"
+    },
+    {
+        name: "Carlos Rodriguez",
+        nacionality: "Madrid, Spain",
+        date: "11, Feb 2024",
+        testimonial: "Pragadesh is a true professional. He understood my vision and executed it flawlessly, resulting in a website that perfectly reflects my style.",
+        img: "https://framerusercontent.com/images/Z6jN7LpUEhLhZgierlSggRqOkqg.png"
+    }
+]
+---
+<article class="bg-smoke-900 rounded-xl py-4 border border-smoke-700 order-1 flex flex-col">
+    <HeaderCards title="Rave Reviews Showcase" subtitle="Testimonials">
+        <CatTest class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+    <span class="w-full h-[1px] bg-smoke-500"></span>
+    <div class="w-full bg-red-500/1 h-full py-3 relative flex overflow-hidden">
+        <div class="flex flex-col gap-y-4 h-[300px] animate-loop-vertical oo">
+            {
+                testimonials.map(({ name, nacionality, date, testimonial, img }) => (
+                    <CardTest
+                        name={name}
+                        nacionality={nacionality}
+                        date={date}
+                        text={testimonial}
+                        img={img}
+                    />
+                ))
+            }
+            {
+                testimonials.map(({ name, nacionality, date, testimonial, img }) => (
+                    <CardTest
+                        name={name}
+                        nacionality={nacionality}
+                        date={date}
+                        text={testimonial}
+                        img={img}
+                    />
+                ))
+            }
+        </div>
+        <div
+            class="absolute inset-0 z-10"
+            style="background-image: linear-gradient(0deg, #101010 3%, #10101010 15%, #10101010 85%, #101010 97%);"
+        >
+        </div>
+    </div>
+</article>
+
+<style>
+    .oo {
+        --extra-height: 25.955rem;
+    }
+</style>
+
+<script>
+    const cards = document.querySelectorAll(".card-testimonial")
+
+    cards.forEach((card, index) => {
+        if(index % 2 === 0) {
+            card.classList.add('par')
+        } else {
+            card.classList.add('impar')
+        }
+    })
+</script>

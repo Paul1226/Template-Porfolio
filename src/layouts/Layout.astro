@@ -22,11 +22,11 @@ import Footer from '../sections/Footer.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-primario text-sm">
-		<div class="w-11/12 max-w-[400px] md:max-w-[900px] mx-auto py-4">
+	<body class="bg-smoke-950 text-sm min-h-screen flex items-center">
+		<div class="w-11/12 max-w-[400px] md:max-w-[870px] 2xl:max-w-[1422px] mx-auto py-4">
 			<main>
 				<slot/>
-				<Footer/>
+				<!-- <Footer/> -->
 			</main>
 		</div>
 	</body>
@@ -37,11 +37,6 @@ import Footer from '../sections/Footer.astro';
 		padding: 0;
 		box-sizing: border-box;
 	}
-	/* html{
-		scrollbar-width: thin;
-		scrollbar-color: #a291fd #050505;
-
-	} */
 	html, body {
 		font-family: 'Manrope Variable', sans-serif;
 		scrollbar-width: thin;
