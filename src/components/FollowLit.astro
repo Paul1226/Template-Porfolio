@@ -11,8 +11,7 @@ const { title, url } = Astro.props;
 
 <li>
     <a
-        class="flex flex-col p-2 bg-smoke-700 rounded-xl border border-smoke-600 h-12 overflow-hidden"
-        style="transition: height 0.3s ease-in-out"
+        class="flex flex-col p-2 bg-smoke-800 rounded-xl border border-smoke-700 h-12 overflow-hidden hover:bg-smoke-700 transition-colors duration-300 ease-in-out group"
         href={url}
         target="_blank"
         rel="noopener noreferrer"
@@ -25,7 +24,7 @@ const { title, url } = Astro.props;
                 <span class="text-neutral-500 font-semibold">{title} </span>
             </div>
 
-            <Arrow class="w-5 fill-neutral-400 mr-2 -rotate-45" />
+            <Arrow class="w-5 fill-neutral-400 mr-2 opacity-0 transition-all duration-300 group-hover:-rotate-45 group-hover:opacity-100" />
         </div>
     </a>
 </li>

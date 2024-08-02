@@ -30,9 +30,11 @@ Este proyecto será de código abierto.
 ## Tarea 4
 - [_] Agregar las animaciones horizontalmente que son las únicas que faltan.
 - [_] Ajustar página que por alguna razón crecieron divs contenedores.
-- [_] Ajustar página que por alguna razón crecieron divs contenedores.
 - [_] Agregar hover en followLit.
 - [_] Habilitar descarga del curriculum.
-- [_] El responsive de la página solo esta hasta 810px falta para pantallas más grandes 1420px.
-- [_] Ajustar personalLit en 810px extamente.
-- [_] En workflow 1440px ya de funcionan los link si no se aplica un hover y mostar el contenido.
+- [✔] El responsive de la página solo esta hasta 810px falta para pantallas más grandes 1420px.
+- [_] Ajustar personalLit en 810px exatamente.
+- [✔] En workflow 1440px ya de funcionan los link si no se aplica un hover y mostar el contenido.
+
+## Tarea 5
+- [_] Se reutiliar un componente que contiene casi el mismo código.
