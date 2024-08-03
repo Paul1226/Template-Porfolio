@@ -1,0 +1,48 @@
+---
+import ServicesLit from "./ServicesLit.astro";
+
+// icons
+import MobileApp from "../../public/icons/services/MobileApp.astro";
+import WebDev from "../../public/icons/services/WebDev.astro";
+import WebDesign from "../../public/icons/services/WebDesign.astro";
+---
+
+<div class="relative overflow-hidden">
+    <div
+        class="absolute inset-0 z-10"
+        style="background: linear-gradient(90deg, #101010 3%, #10101010 15%, #10101010 85%, #101010 97%);"
+    >
+    </div>
+    <div class="w-full h-full">
+        <ul class="flex items-center gap-3 animate-loop">
+            <ServicesLit text="Mobile App">
+                <MobileApp class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Web Developer">
+                <WebDev class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Web Design">
+                <WebDesign class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Mobile App">
+                <MobileApp class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Web Developer">
+                <WebDev class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Web Design">
+                <WebDesign class="icon" slot="icon" />
+            </ServicesLit>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .icon {
+        @apply w-full h-full fill-neutral-300;
+    }
+
+    .animate-loop {
+        --extra-width: 8.6rem;
+    }
+</style>

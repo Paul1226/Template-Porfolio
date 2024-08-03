@@ -1,37 +1,47 @@
 ---
+// icons
 import Facebook from "../../public/icons/clients/Facebook.astro";
 import Spotify from "../../public/icons/clients/Spotify.astro";
 import TikTok from "../../public/icons/clients/TikTok.astro";
 import Twitter from "../../public/icons/clients/Twitter.astro";
 import Youtube from "../../public/icons/clients/Youtube.astro";
-
-const clases = "w-20 fill-neutral-400 text-smoke-700";
-const clasesSpan = "w-32 h-12 bg-smoke-700 rounded-xl border border-smoke-600 text-smoke-600 grid place-content-center";
 ---
 
 <div class="relative overflow-hidden">
     <div
         class="absolute inset-0 z-10"
         style="background: linear-gradient(90deg, #101010 3%, #10101010 15%, #10101010 85%, #101010 97%);"
-    ></div>
-    <div class="w-full overflow-hidden">
-        <div class="flex items-center gap-3 overflow-hidden">
-            <span class={clasesSpan}><Facebook class={clases} /></span>
-            <span class={clasesSpan}><Spotify class={clases} /></span>
-            <span class={clasesSpan}><TikTok class={clases} /></span>
-            <!-- <span class={clasesSpan}><Twitter class={clases} /></span> -->
-            <!-- <span class={clasesSpan}><Youtube class={clases} /></span> -->
-            <!-- <span class={clasesSpan}><Facebook class={clases} /></span> -->
-            <!-- <span class={clasesSpan}><Spotify class={clases} /></span> -->
-            <!-- <span class={clasesSpan}><TikTok class={clases} /></span> -->
-            <!-- <span class={clasesSpan}><Twitter class={clases} /></span> -->
-            <!-- <span class={clasesSpan}><Youtube class={clases} /></span> -->
-        </div>
+    >
+    </div>
+    <div class="w-full h-full">
+        <ul class="flex items-center gap-3 animate-loop">
+            <li><figure><Facebook class="icon" /></figure></li>
+            <li><figure><Spotify class="icon" /></figure></li>
+            <li><figure><TikTok class="icon" /></figure></li>
+            <li><figure><Twitter class="icon" /></figure></li>
+            <li><figure><Youtube class="icon" /></figure></li>
+            <li><figure><Facebook class="icon" /></figure></li>
+            <li><figure><Spotify class="icon" /></figure></li>
+            <li><figure><TikTok class="icon" /></figure></li>
+            <li><figure><Twitter class="icon" /></figure></li>
+            <li><figure><Youtube class="icon" /></figure></li>
+        </ul>
     </div>
 </div>
 
 <style>
+    li {
+        @apply border border-smoke-700 bg-smoke-800 rounded-lg text-smoke-800;
+
+        figure{
+            @apply w-28 h-full p-2 px-4 flex items-center;
+        }
+    }
+    .icon {
+        @apply w-full h-full fill-neutral-400;
+    }
+
     .animate-loop {
-        --extra-width: 12rem;
+        --extra-width: 7.8rem;
     }
 </style>

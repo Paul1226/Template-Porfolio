@@ -5,7 +5,7 @@ import Telegram from "../../public/icons/about/Telegram.astro"
 import WhatsApp from "../../public/icons/about/WhatsApp.astro"
 import Download from "../../public/icons/about/Download.astro"
 ---
-<article class="bg-smoke-900 rounded-xl p-4 border border-smoke-700 order-1 md:order-2 w-full min-h-[320px] h-max flex flex-col gap-3 2xl:min-h-[345px]">
+<article class="bg-smoke-900 rounded-xl p-4 border border-smoke-700 order-1 md:order-2 w-full min-h-[320px] h-max flex flex-col gap-4 2xl:min-h-[345px]">
 
     <div class="bg-red-40 flex items-center gap-4">
         <figure
@@ -31,7 +31,10 @@ import Download from "../../public/icons/about/Download.astro"
                 
                 <a
                     class="w-max h-full items-center justify-center font-medium gap-x-2 text-sm hidden md:flex"
-                    href="#">Resume
+                    href="/cvs/PaulDev-Porfolio.pdf"
+                    download="PaulDev-Curriculm.pdf"
+                    rel="noopener noreferrer"
+                >Resume
                     <span class="w-10 p-2 bg-smoke-500 rounded-lg">
                         <Download class="w-full fill-neutral-300" />
                     </span>
@@ -48,7 +51,7 @@ import Download from "../../public/icons/about/Download.astro"
         </div>
     </div>
 
-    <div class="bg-smoke-800 rounded-xl p-3 flex-grow">
+    <div class="bg-smoke-800 rounded-xl p-3 pr-4 py-[18px] flex-grow">
         <PersonalLit />
     </div>
 

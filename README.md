@@ -19,7 +19,7 @@ Este proyecto será de código abierto.
 - [✔] Agregar animación en los botones con borde animado.
 - [_] Poner otra sombra con el filter shadow.
 - [✔] Agregar animación en disponible para trabajar.
-- [_] En pagina 404 faltar adecuar bien el footer.
+- [_] En pagina 404 faltar adecuar bien el footer en version destopk.
 - [_] Animar la aparicion de cards en version desktop.
 - [✔] Añadir el icono de resume en version desktop dentro de about.
 
@@ -28,13 +28,16 @@ Este proyecto será de código abierto.
 - [_] Optimizacion de imagenes.
 
 ## Tarea 4
-- [_] Agregar las animaciones horizontalmente que son las únicas que faltan.
-- [_] Ajustar página que por alguna razón crecieron divs contenedores.
-- [_] Agregar hover en followLit.
-- [_] Habilitar descarga del curriculum.
+- [✔] Agregar las animaciones horizontalmente que son las únicas que faltan.
+- [✔] Ajustar página que por alguna razón crecieron divs contenedores.
+- [✔] Agregar hover en followLit.
+- [✔] Habilitar descarga del curriculum.
 - [✔] El responsive de la página solo esta hasta 810px falta para pantallas más grandes 1420px.
 - [_] Ajustar personalLit en 810px exatamente.
 - [✔] En workflow 1440px ya de funcionan los link si no se aplica un hover y mostar el contenido.
 
 ## Tarea 5
 - [_] Se reutiliar un componente que contiene casi el mismo código.
+
+## Tarea 6
+- [_] Contenedor de animaciones solucionas sin embargo solo esta de ajustar las variables para el responsive.

@@ -1,0 +1,46 @@
+---
+import ServicesLit from "./ServicesLit.astro"
+
+// icons
+import Framer from "../../public/icons/Framer.astro"
+import Webflow from "../../public/icons/Webflow.astro"
+import WebDesign from "../../public/icons/services/WebDesign.astro"
+---
+
+<div class="relative w-full overflow-hidden">
+    <div
+        class="absolute inset-0 z-10"
+        style="background-image: linear-gradient(90deg, #101010 3%, #10101010 15%, #10101010 85%, #101010 97%);"
+    >
+    </div>
+    <div class="w-full h-full">
+        <ul class="flex items-center gap-3 animate-loop-reverse opacity-50">
+            <ServicesLit text="Framer Development">
+                <Framer class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Webflow Development">
+                <Webflow class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="SEO Optimization">
+                <WebDesign class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Framer Development">
+                <Framer class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Webflow Development">
+                <Webflow class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="SEO Optimization">
+                <WebDesign class="icon" slot="icon" />
+            </ServicesLit>
+</div>
+
+<style>
+    .icon {
+        @apply w-full h-full fill-neutral-300;
+    }
+
+    .animate-loop-reverse {
+        --extra-width: 8.6rem;
+    }
+</style>

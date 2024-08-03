@@ -1,20 +1,20 @@
 ---
 import HeaderCards from "../components/HeaderCards.astro"
 import ButtonPages from "../components/ButtonPages.astro"
+import ServicesFirst from "../components/ServicesFirst.astro";
+import ServicesSecond from "../components/ServicesSecond.astro";
 
 // icons
 import NavServices from "../../public/icons/NavServices.astro"
-import ClientsFirst from "../components/ClientsFirst.astro"
-import ClientsSecond from "../components/ClientsSecond.astro"
 ---
 <article class="bg-smoke-900 rounded-xl py-4 border border-smoke-700 order-3 flex flex-col w-full">
     <HeaderCards title="Solution Suite" subtitle="Services">
         <NavServices class="w-5 fill-central-400" slot="icon" />
     </HeaderCards>
-    <div class="w-full h-full py-4 relative overflow-hidden flex flex-col gap-y-4">
-        <!-- <ClientsFirst /> -->
-        <!-- <ClientsSecond /> -->
+    <div class="w-full h-full py-3 relative overflow-hidden flex flex-col gap-y-4 bg-red-500/1">
+        <ServicesFirst />
+        <ServicesSecond />
 
-        <ButtonPages text="View All Services" />
+        <ButtonPages text="View All Services" href="/services" />
     </div>
 </article>

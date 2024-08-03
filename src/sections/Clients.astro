@@ -1,10 +1,10 @@
 ---
 import HeaderCards from "../components/HeaderCards.astro";
+import ClientsFirst from "../components/ClientsFirst.astro";
+import ClientsSecond from "../components/ClientsSecond.astro";
 
 // icons
 import Rocket from "../../public/icons/clients/Rocket.astro";
-import ClientsFirst from "../components/ClientsFirst.astro";
-import ClientsSecond from "../components/ClientsSecond.astro";
 ---
 
 <article
@@ -13,8 +13,8 @@ import ClientsSecond from "../components/ClientsSecond.astro";
     <HeaderCards title="Satisfied Partners" subtitle="My Clients">
         <Rocket class="w-5 fill-central-400" slot="icon" />
     </HeaderCards>
-    <div class="w-full h-full py-5 flex flex-col gap-3 overflow-hidden relative">
-        <!-- <ClientsFirst /> -->
-        <!-- <ClientsSecond /> -->
+    <div class="w-full h-full py-3 relative overflow-hidden flex flex-col gap-y-4 bg-red-500/1">
+        <ClientsFirst />
+        <ClientsSecond />
     </div>
 </article>
