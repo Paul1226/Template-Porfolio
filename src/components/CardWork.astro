@@ -1,0 +1,48 @@
+---
+interface Props {
+    title: string;
+    src: string;
+    href: string;
+    text: string;
+}
+const { title, src, href, text } = Astro.props;
+
+// icons
+import Arrow from "../../public/icons/Arrow.astro";
+---
+
+<article class="bg-smoke-700 rounded-lg overflow-hidden border border-smoke-600 transition-colors duration-300 ease-in-out hover:bg-smoke-400">
+    <a class="p-3 w-full flex flex-col gap-3 group" href={href}>
+        <figure class="w-full aspect-[16/7.2] rounded-lg overflow-hidden">
+            <img class="w-full h-full object-cover brightness-100 duration-300 group-hover:brightness-[.4]" src={src} alt=`Imagen del proyecto ${title}` />
+        </figure>
+
+        <div class="flex justify-between items-center">
+            <div class="pr">
+                <h3 class="font-semibold">{title}</h3>
+                <p class="text-neutral-400">{text}</p>
+            </div>
+            <div class="aspect-square h-[44px] p-3 bg-smoke-600 rounded-full border border-smoke-500 overflow-hidden">
+                <figure class=" arrows relative">
+                    <Arrow class="w-full fill-neutral-400 -rotate-45 " />
+                    <Arrow class="w-6 fill-neutral-400 -rotate-45 absolute top-[110%] right-[110%]" />
+                </figure>
+            </div>
+        </div>
+    </a>
+</article>
+
+<style>
+    a:hover .arrows {
+        animation: deslizar 300ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    }
+
+    @keyframes deslizar {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform:translate(120%, -120%);
+        }
+    }
+</style>

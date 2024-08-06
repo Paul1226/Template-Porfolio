@@ -1,0 +1,33 @@
+---
+interface Props {
+    text: string
+    href: string
+    subtext: string
+}
+const { text, href, subtext } = Astro.props
+
+import Arrow from '../../public/icons/Arrow.astro'
+---
+<a
+    class="flex justify-between items-center bg-smoke-700 p-2 rounded-xl group border border-smoke-600 duration-500 hover:bg-smoke-400 w-full md:items-start md:justify-start md:gap-2"
+    href={href}>
+    <div class="flex items-center gap-3 md:flex-col md:items-start">
+        <div class="flex justify-between items-center w-full">
+
+            <figure class="w-8 h-8 bg-smoke-500 p-[5px] rounded-lg">
+                <slot name="icon" />
+            </figure>
+
+            <div class="opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-45">
+                <Arrow class="w-5 fill-neutral-400 hidden 2xl:block" />
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <span class="text-neutral-300 font-semibold">{text}</span>
+            <span class="text-neutral-500 font-medium min-w-[112px] text-xs">{subtext}</span>
+        </div>
+    </div>
+    <div class="opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-rotate-45 2xl:hidden">
+        <Arrow class="w-5 fill-neutral-400 md:pt-2 " />
+    </div>
+</a>

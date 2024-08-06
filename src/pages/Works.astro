@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// componenets
+import TopProjects from "../sections/TopProjects.astro";
+import DemoPorfolio from "../sections/DemoPorfolio.astro";
+import RecognitionsAwards from "../sections/RecognitionsAwards.astro";
+import HeroWorks from "../sections/HeroWorks.astro";
+import AboutWorks from "../sections/AboutWorks.astro";
+import Services from "../sections/Services.astro";
+import HardcoreSkills from "../sections/HardcoreSkills.astro";
+import WhyMe from "../sections/WhyMe.astro";
+---
+
+<Layout title="Template - Portfolio | Works">
+    <div
+        class="grid grid-cols-1 gap-3 2xl:grid-cols-4 2xl:grid-rows-1"
+    >
+        <section class="grid grid-cols-1 gap-3 order-1 2xl:order-2 2xl:grid-rows-[1fr_228px] 2xl:col-span-2">
+            <TopProjects />
+
+            <div
+                class="grid grid-cols-1 grid-rows-[auto_1fr] gap-3 md:grid-cols-[1fr_1.6fr] md:grid-rows-1 h-full"
+            >
+                <DemoPorfolio />
+                <RecognitionsAwards />
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 gap-3 order-2 2xl:order-1 md:grid-cols-2 md:grid-rows-[auto-1fr] 2xl:grid-cols-1 2xl:grid-rows-[auto_auto_auto]">
+            <div class="md:col-span-2 2xl:col-span-1">
+                <HeroWorks />
+            </div>
+            <AboutWorks />
+            <Services />
+        </section>
+        <section class="order-3">
+            <HardcoreSkills />
+            <WhyMe />
+        </section>
+    </div>
+</Layout>

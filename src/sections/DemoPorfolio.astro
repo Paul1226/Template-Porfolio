@@ -1,0 +1,28 @@
+---
+import HeaderCards from "../components/HeaderCards.astro"
+import ButtonArsenal from "../components/ButtonArsenal.astro"
+
+// icons
+import WorkDemo from "../../public/icons/worksPage/WorkDemo.astro"
+import Balon from "../../public/icons/worksPage/Balon.astro"
+import Behance from "../../public/icons/worksPage/Behance.astro"
+---
+<article class="bg-smoke-900 rounded-xl p-4 border border-smoke-700 flex flex-col">
+    <HeaderCards title="My Demo Works" subtitle="My Porfolio">
+        <WorkDemo class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+    <div class="flex items-center gap-3 pt-3 md:flex-col">
+        <ButtonArsenal text="Dribble" href="#">
+            <Balon
+                class="w-full h-full fill-neutral-400 duration-300 group-hover:fill-central-300"
+                slot="icon"
+            />
+        </ButtonArsenal>
+        <ButtonArsenal text="Behance" href="#">
+            <Behance
+                class="w-full h-full fill-neutral-400 duration-300 group-hover:fill-central-300"
+                slot="icon"
+            />
+        </ButtonArsenal>
+    </div>
+</article>

@@ -1,34 +1,27 @@
 ---
-import Person from "../../public/icons/Person.astro"
-import Works from "../../public/icons/Works.astro"
-import NavServices from "../../public/icons/NavServices.astro"
-
-const nav = ['about', 'works', 'services']
+import Person from "../../public/icons/Person.astro";
+import Works from "../../public/icons/Works.astro";
+import NavServices from "../../public/icons/NavServices.astro";
 ---
-<nav class="bg-smoke-900 p-2 rounded-xl border border-smoke-700 md:hidden h-[65px] w-full">
+
+<nav
+    class="bg-smoke-900 p-2 rounded-xl border border-smoke-700 md:hidden h-[65px] w-full"
+>
     <ul class="grid grid-cols-3 gap-x-2 h-full">
         <li>
-            <a 
-                href="/"
-            >
+            <a class="link-nav active" href="/">
                 <Person class="w-5 fill-central-50" />
                 <span>About</span>
             </a>
         </li>
         <li>
-            <a 
-                href="/Works"
-                rel="noopener noreferrer"
-            >
+            <a class="link-nav" href="/Works" rel="noopener noreferrer">
                 <Works class="w-5 fill-central-50" />
                 <span>Works</span>
             </a>
         </li>
         <li>
-            <a 
-                href="/Services"
-                rel="noopener noreferrer"
-            >
+            <a class="link-nav" href="/Services" rel="noopener noreferrer">
                 <NavServices class="w-5 fill-central-50" />
                 <span>Services</span>
             </a>
@@ -39,19 +32,27 @@ const nav = ['about', 'works', 'services']
 <style>
     ul li a {
         @apply h-full flex items-center justify-center gap-x-1 rounded-lg font-medium duration-300 ease-in-out bg-smoke-800 hover:bg-smoke-700;
-        
     }
 
     ul li a.active {
         @apply text-smoke-900 bg-central-400;
-        svg{
+        svg {
             @apply fill-smoke-900;
         }
     }
 </style>
 
 <script>
-    const primero : any = document.querySelector('ul li  a')
+    const linksNav = document.querySelectorAll(".link-nav") as NodeListOf<HTMLAnchorElement>
+    function getHref() {
+        return window.location.href
+    }
 
-    primero.classList.add('active')
+    linksNav.forEach(link => {
+        if(getHref() === link.href) {
+            link.classList.add("active")
+        }else {
+            link.classList.remove("active")
+        }
+    })
 </script>

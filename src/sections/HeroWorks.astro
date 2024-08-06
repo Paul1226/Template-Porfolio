@@ -1,0 +1,23 @@
+---
+import Certifications from "../../public/icons/heroWorks/Certifications.astro"
+import ClientsWorks from "../../public/icons/heroWorks/ClientsWorks.astro"
+import Collaborations from "../../public/icons/heroWorks/Collaborations.astro"
+import DesignsWorks from "../../public/icons/heroWorks/DesignsWorks.astro"
+import CardHero from "../components/CardHero.astro"
+---
+<section
+    class="grid grid-cols-2 grid-rows-2 gap-3 md:grid-cols-4 md:grid-rows-1 2xl:grid-cols-2 2xl:grid-rows-2"
+>
+    <CardHero number="08" word="Certifications">
+        <Certifications class="w-5 fill-central-400" slot="icon" />
+    </CardHero>
+    <CardHero number="250" word="Designs" >
+        <DesignsWorks class="w-5 fill-central-400" slot="icon" />
+    </CardHero>
+    <CardHero number="07" word="Collaborations">
+        <Collaborations class="w-5 fill-central-400" slot="icon" />
+    </CardHero>
+    <CardHero number="32" word="Clients" >
+        <ClientsWorks class="w-5 fill-central-400" slot="icon" />
+    </CardHero>
+</section>

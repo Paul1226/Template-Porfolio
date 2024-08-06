@@ -1,0 +1,67 @@
+---
+import CardWork from "../components/CardWork.astro";
+import HeaderCards from "../components/HeaderCards.astro";
+
+// icons
+import WorkTittle from "../../public/icons/worksPage/WorkTittle.astro";
+
+const worksProjects = [
+    {
+        title: "Nathan",
+        text: "Porfolio",
+        src: "/imgs/header04.jpg",
+        href: "#",
+    },
+    {
+        title: "NexGen Agency",
+        text: "Agency",
+        src: "/imgs/header05.jpg",
+        href: "#",
+    },
+    {
+        title: "StyleLoom",
+        text: "Ecommerce",
+        src: "/imgs/header08.jpg",
+        href: "#",
+    },
+    {
+        title: "DevCraft",
+        text: "Porfolio",
+        src: "/imgs/header10.jpg",
+        href: "#",
+    },
+    {
+        title: "Currentvandi",
+        text: "Business",
+        src: "/imgs/header04.jpg",
+        href: "#",
+    },
+    {
+        title: "Damien",
+        text: "Porfolio",
+        src: "/imgs/header05.jpg",
+        href: "#",
+    },
+];
+---
+
+<section class="bg-smoke-900 rounded-xl p-3 border border-smoke-700 md:p-4 2xl:min-h-[483px] flex flex-col gap-4">
+    <HeaderCards title="My top 6 Projects" subtitle="My Works">
+        <WorkTittle class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+
+    <section
+        class="grid grid-cols-1 grid-rows-6 gap-3 md:grid-cols-3 md:grid-rows-2 h-full"
+    >
+        {
+            worksProjects.map((project) => (
+                <CardWork
+                    title={project.title}
+                    text={project.text}
+                    src={project.src}
+                    href={project.href}
+                />
+            ))
+        }
+    </section>
+</section>

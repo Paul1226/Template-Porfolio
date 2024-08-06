@@ -1,0 +1,45 @@
+---
+import HeaderCards from "../components/HeaderCards.astro"
+import ButtonRecognitions from "../components/ButtonRecognitions.astro"
+
+// icons
+import Recorgnitions from "../../public/icons/worksPage/Recorgnitions.astro"
+import DesignMastery from "../../public/icons/worksPage/DesignMastery.astro"
+import Excellence from "../../public/icons/worksPage/Excellence.astro"
+import GeziteDetails from "../../public/icons/worksPage/GeziteDetails.astro"
+---
+<article class="bg-smoke-900 p-4 rounded-lg flex flex-col">
+    <HeaderCards title="My Demo Works" subtitle="My Porfolio">
+        <Recorgnitions class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+    <div
+        class="w-full h-full grid grid-cols-1 pt-3 gap-2 md:grid-cols-3 md:grid-rows-1"
+    >
+        <ButtonRecognitions
+            text="DribbleMastery"
+            href="#"
+            subtext="designmastery.com"
+        >
+            <DesignMastery
+                class="w-full h-full fill-neutral-400 duration-300 group-hover:fill-central-300"
+                slot="icon"
+            />
+        </ButtonRecognitions>
+        <ButtonRecognitions text="Excellence" href="#" subtext="excellence.in">
+            <Excellence
+                class="w-full h-full fill-neutral-400 duration-300 group-hover:fill-central-300"
+                slot="icon"
+            />
+        </ButtonRecognitions>
+        <ButtonRecognitions
+            text="Getzite Details"
+            href="#"
+            subtext="gezitedetails.com"
+        >
+            <GeziteDetails
+                class="w-full h-full fill-neutral-400 duration-300 group-hover:fill-central-300"
+                slot="icon"
+            />
+        </ButtonRecognitions>
+    </div>
+</article>

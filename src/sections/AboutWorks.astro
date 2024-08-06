@@ -1,0 +1,55 @@
+---
+import ButtonPages from "../components/ButtonPages.astro"
+
+// icons
+import Twitter404 from "../../public/icons/404Icons/Twitter404.astro"
+import Instagram404 from "../../public/icons/404Icons/Instagram404.astro"
+import Linkedin404 from "../../public/icons/404Icons/Linkedin404.astro"
+import Pared from "../../public/icons/404Icons/Pared.astro"
+---
+<article
+    class="bg-smoke-900 border border-smoke-700 rounded-xl p-3 relative overflow-hidden h-full w-full min-h-[218px]"
+>
+    <div class="w-full h-full relative flex flex-col items-center gap-1 pt-2">
+        <figure
+            class="w-full max-w-[80px] overflow-hidden rounded-xl bg-central-400 relative"
+        >
+            <img
+                class="w-full h-full object-cover scale-125 [filter:drop-shadow(3px_-1px_1px_white)]"
+                src="/imgs/perfil.webp"
+                alt="Imagen de perfil del autor"
+            />
+        </figure>
+        <h2 class="text-2xl font-semibold">PaulDev</h2>
+        <div class="conicons flex items-center gap-x-2 pt-1">
+            <a
+                class="w-8 p-[6px] rounded-md bg-cuaternario bg-neutral-400/30 pointer-events-none"
+                href="#"
+                target="_blank"
+            >
+                <Twitter404 class="w-full fill-neutral-300" />
+            </a>
+            <a
+                class="w-8 p-[6px] rounded-md bg-cuaternario bg-neutral-400/30 pointer-events-none"
+                href="#"
+                target="_blank"
+            >
+                <Instagram404 class="w-full fill-neutral-300" />
+            </a>
+            <a
+                class="w-8 p-[6px] rounded-md bg-cuaternario bg-neutral-400/30 pointer-events-none"
+                href="#"
+                target="_blank"
+            >
+                <Linkedin404 class="w-full fill-neutral-300" />
+            </a>
+        </div>
+        <ButtonPages text="About Me" href="/" />
+    </div>
+
+    <div class="absolute inset-0 z-10">
+        <Pared
+            class="w-full h-full fill-terciario object-cover relative z-10 scale-x-[1.45]"
+        />
+    </div>
+</article>
