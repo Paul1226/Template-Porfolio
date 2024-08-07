@@ -14,7 +14,7 @@ import Youtube from "../../public/icons/clients/Youtube.astro";
     >
     </div>
     <div class="w-full h-full">
-        <ul class="flex items-center gap-3 animate-loop">
+        <ul class="flex items-center gap-3 animate-loop w-max">
             <li><figure><Facebook class="icon" /></figure></li>
             <li><figure><Spotify class="icon" /></figure></li>
             <li><figure><TikTok class="icon" /></figure></li>
@@ -42,6 +42,7 @@ import Youtube from "../../public/icons/clients/Youtube.astro";
     }
 
     .animate-loop {
-        --extra-width: 7.8rem;
+        --extra-width: 6px;
+        animation-duration: 18s;
     }
 </style>

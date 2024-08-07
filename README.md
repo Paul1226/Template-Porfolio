@@ -24,7 +24,7 @@ Este proyecto será de código abierto.
 - [✔] Añadir el icono de resume en version desktop dentro de about.
 
 ## Tarea 3
-- [_] Solucionar los saltos en la animacipon en my clients.
+- [✔] Solucionar los saltos en la animacipon en my clients.
 - [_] Optimizacion de imagenes.
 
 ## Tarea 4
@@ -40,4 +40,7 @@ Este proyecto será de código abierto.
 - [_] Se reutiliar un componente que contiene casi el mismo código.
 
 ## Tarea 6
-- [_] Contenedor de animaciones solucionas sin embargo solo esta de ajustar las variables para el responsive.
+- [✔] Contenedor de animaciones solucionas sin embargo solo esta de ajustar las variables para el responsive.
+
+## Tarea 7
+- [_] Esta de controlar el nav y estilos ya que en produccion no cambia el active en los links.

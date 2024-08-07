@@ -14,7 +14,7 @@ import Discord from "../../public/icons/clients/Discord.astro"
     >
     </div>
     <div class="w-full h-full">
-        <ul class="flex items-center gap-3 animate-loop-reverse">
+        <ul class="flex items-center gap-3 animate-loop-reverse w-max">
             <li><figure><Instagram class="icon" /></figure></li>
             <li><figure><Snapchat class="icon" /></figure></li>
             <li><figure><Dribbble class="icon" /></figure></li>
@@ -42,6 +42,7 @@ import Discord from "../../public/icons/clients/Discord.astro"
     }
 
     .animate-loop-reverse {
-        --extra-width: 7.8rem;
+        --extra-width: 6px;
+        animation-duration: 18s;
     }
 </style>
