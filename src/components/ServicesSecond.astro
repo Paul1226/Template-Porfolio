@@ -14,7 +14,7 @@ import WebDesign from "../../public/icons/services/WebDesign.astro"
     >
     </div>
     <div class="w-full h-full">
-        <ul class="flex items-center gap-3 animate-loop-reverse opacity-50">
+        <ul class="flex items-center gap-3 animate-loop-reverse opacity-50 w-max">
             <ServicesLit text="Framer Development">
                 <Framer class="icon" slot="icon" />
             </ServicesLit>
@@ -41,6 +41,7 @@ import WebDesign from "../../public/icons/services/WebDesign.astro"
     }
 
     .animate-loop-reverse {
-        --extra-width: 8.6rem;
+        --extra-width: 6px;
+        animation-duration: 20s;
     }
 </style>

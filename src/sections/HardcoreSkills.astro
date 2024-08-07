@@ -1,11 +1,41 @@
 ---
 import HeaderCards from "../components/HeaderCards.astro"
+import SkillsLit from "../components/SkillsLit.astro"
 
 // icons
 import SkillsTittle from "../../public/icons/hardcoreSkills/SkillsTittle.astro"
+import Figma from "../../public/icons/Figma.astro"
+import Notion from "../../public/icons/hardcoreSkills/Notion.astro"
+import Shopify from "../../public/icons/Shopify.astro"
+import Mailchimp from "../../public/icons/hardcoreSkills/Mailchimp.astro"
+import WordPress from "../../public/icons/hardcoreSkills/WordPress.astro"
+import Jira from "../../public/icons/hardcoreSkills/Jira.astro"
 ---
-<article class="bg-smoke-900 border border-smoke-700 p-3 rounded-xl">
+<article class="bg-smoke-900 border border-smoke-700 rounded-xl pt-3">
     <HeaderCards title="Hardcore Skills" subtitle="My Toolbox">
         <SkillsTittle class="w-5 fill-central-400" slot="icon" />
     </HeaderCards>
+
+    <span class="w-full h-[1px] bg-smoke-500 flex"></span>
+
+    <ul class="grid grid-cols-1 gap-2 md:grid-cols-2 p-3">
+        <SkillsLit title="Figma" text="DesignTool">
+            <Figma class="w-5 fill-neutral-400" slot="icon" />
+        </SkillsLit>
+        <SkillsLit title="Notion" text="Productivity Tool">
+            <Notion class="w-5 fill-neutral-400" slot="icon" />
+        </SkillsLit>
+        <SkillsLit title="Shopify" text="Ecommerce Tool">
+            <Shopify class="w-5 fill-neutral-400" slot="icon" />
+        </SkillsLit>
+        <SkillsLit title="Mailchimp" text="Marketing Tool">
+            <Mailchimp class="w-5 fill-neutral-400" slot="icon" />
+        </SkillsLit>
+        <SkillsLit title="WorkPress" text="CMS Tool">
+            <WordPress class="w-5 fill-neutral-400" slot="icon" />
+        </SkillsLit>
+        <SkillsLit title="Jira" text="Management Tool">
+            <Jira class="w-5 fill-neutral-400" slot="icon" />
+        </SkillsLit>
+    </ul>   
 </article>

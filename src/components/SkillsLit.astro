@@ -1,0 +1,18 @@
+---
+interface Props {
+    title: string
+    text: string
+}
+const { title, text } = Astro.props
+---
+
+<li class="bg-smoke-800 p-2 rounded-lg border border-smoke-700 gap-2 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+        <figure class="w-8 h-8 p-[5px] rounded-lg bg-smoke-500">
+            <slot name="icon" />
+        </figure>
+        <span class="font-semibold text-neutral-400">{title}</span>
+    </div>
+
+    <p class="text-neutral-400 bg-smoke-600 h-8 w-max px-3 rounded-lg flex justify-center items-center">{text}</p>
+</li>

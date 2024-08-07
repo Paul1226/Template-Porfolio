@@ -41,8 +41,8 @@ const testimonials = [
         <CatTest class="w-5 fill-central-400" slot="icon" />
     </HeaderCards>
     <span class="w-full h-[1px] bg-smoke-500"></span>
-    <div class="w-full bg-red-500/1 h-full py-3 relative flex overflow-hidden">
-        <div class="flex flex-col gap-y-4 h-[300px] animate-loop-vertical oo">
+    <div class="w-full bg-red-500/1 h-[340px] py-3 relative flex overflow-hidden">
+        <div class="flex flex-col gap-y-3 h-max animate-loop-vertical">
             {
                 testimonials.map(({ name, nacionality, date, testimonial, img }) => (
                     <CardTest
@@ -75,8 +75,9 @@ const testimonials = [
 </article>
 
 <style>
-    .oo {
-        --extra-height: 25.955rem;
+    .animate-loop-vertical {
+        --extra-height: 6px;
+        animation-duration: 30s;
     }
 </style>
 

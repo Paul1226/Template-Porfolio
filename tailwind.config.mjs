@@ -4,21 +4,21 @@ export default {
 	theme: {
 		extend: {
 			keyframes: {
-				loop: {
-					"100%": { transform: "translateX(calc(-100% - var(--extra-width)))" }
+				"loop": {
+					"100%": { transform: "translateX(calc(-50% - var(--extra-width)))" }
 				},
 				"loop-reverse": {
-					"0%": { transform: "translateX(calc(-100% - var(--extra-width)))" },
+					"0%": { transform: "translateX(calc(-50% - var(--extra-width)))" },
 					"100%": { transform: "translateX(0)" }
 				},
 				"loop-vertical": {
-					"100%": { transform: "translateY(calc(-100% - var(--extra-height)))" }
+					"100%": { transform: "translateY(calc(-50% - var(--extra-height)))" }
 				}
 			},
 			animation: {
-				loop: "loop 20s linear infinite",
-				"loop-reverse": "loop-reverse 20s linear infinite",
-				"loop-vertical": "loop-vertical 20s linear infinite",
+				"loop": "loop linear infinite",
+				"loop-reverse": "loop-reverse linear infinite",
+				"loop-vertical": "loop-vertical linear infinite",
 			},
 			colors: {
 				'central': {

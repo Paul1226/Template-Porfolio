@@ -1,0 +1,80 @@
+---
+import ServicesLit from "./ServicesLit.astro";
+
+// icons
+import ProblemSolver from "../../public/icons/whyMe/ProblemSolver.astro";
+import TeamPlayer from "../../public/icons/whyMe/TeamPlayer.astro";
+import GoodCommunicator from "../../public/icons/whyMe/GoodCommunicator.astro";
+import Star2 from "../../public/icons/workflow/Star2.astro";
+---
+
+<div class="relative overflow-hidden">
+    <!-- <div
+        class="absolute inset-0 z-10"
+        style="background: linear-gradient(90deg, #101010 3%, #10101010 15%, #10101010 85%, #101010 97%);"
+    >
+    </div> -->
+    <div class="w-full h-full">
+        <ul class="flex items-center gap-3 animate-loop w-max">
+            <ServicesLit text="Attention to Detail">
+                <Star2 class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Problem Solver">
+                <ProblemSolver class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Tem Player">
+                <TeamPlayer class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Good Communicator">
+                <GoodCommunicator class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Attention to Detail">
+                <Star2 class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Problem Solver">
+                <ProblemSolver class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Tem Player">
+                <TeamPlayer class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Good Communicator">
+                <GoodCommunicator class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Attention to Detail">
+                <Star2 class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Problem Solver">
+                <ProblemSolver class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Tem Player">
+                <TeamPlayer class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Good Communicator">
+                <GoodCommunicator class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Attention to Detail">
+                <Star2 class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Problem Solver">
+                <ProblemSolver class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Tem Player">
+                <TeamPlayer class="icon" slot="icon" />
+            </ServicesLit>
+            <ServicesLit text="Good Communicator">
+                <GoodCommunicator class="icon" slot="icon" />
+            </ServicesLit>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .icon {
+        @apply w-full h-full fill-neutral-300;
+    }
+
+    .animate-loop {
+        --extra-width: 6px;
+        animation-duration: 40s;
+    }
+</style>

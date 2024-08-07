@@ -1,0 +1,19 @@
+---
+import HeaderCards from "../components/HeaderCards.astro"
+import WhyMeFirst from "../components/WhyMeFirst.astro"
+import WhyMeSecond from "../components/WhyMeSecond.astro"
+
+// icons
+import SkillsTittle from "../../public/icons/hardcoreSkills/SkillsTittle.astro"
+---
+<article class="bg-smoke-900 border border-smoke-700 pt-3 rounded-xl">
+    <HeaderCards title="Why to Choose Me?" subtitle="Why Me">
+        <SkillsTittle class="w-5 fill-central-400" slot="icon" />
+    </HeaderCards>
+    <span class="w-full h-[1px] bg-smoke-500 flex"></span>
+
+    <div class="w-full h-full py-3 relative overflow-hidden flex flex-col gap-y-4 bg-red-500/1">
+        <WhyMeFirst />
+        <WhyMeSecond />
+    </div>
+</article>
