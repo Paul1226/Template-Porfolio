@@ -53,8 +53,14 @@ import NavServices from "../../public/icons/NavServices.astro";
         }
 
         linksNav.forEach(link => {
+            let linkHref = link.getAttribute("href")
             const pathName = getHref()
-            if(pathName === link.getAttribute("href")) {
+
+            linkHref?.endsWith("/") ? linkHref = linkHref.slice(0, -1) : linkHref
+
+            console.log(linkHref, pathName)
+
+            if(pathName === linkHref) {
                 link.classList.add("active")
             }else {
                 link.classList.remove("active")
