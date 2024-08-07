@@ -43,16 +43,20 @@ import NavServices from "../../public/icons/NavServices.astro";
 </style>
 
 <script>
-    const linksNav = document.querySelectorAll(".link-nav") as NodeListOf<HTMLAnchorElement>
-    function getHref() {
-        return window.location.href
-    }
-
-    linksNav.forEach(link => {
-        if(getHref() === link.href) {
-            link.classList.add("active")
-        }else {
-            link.classList.remove("active")
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const linksNav = document.querySelectorAll(".link-nav") as NodeListOf<HTMLAnchorElement>
+        function getHref() {
+            return window.location.pathname
         }
+
+        linksNav.forEach(link => {
+            const pathName = getHref()
+            if(pathName === link.getAttribute("href")) {
+                link.classList.add("active")
+            }else {
+                link.classList.remove("active")
+            }
+        })
     })
 </script>
