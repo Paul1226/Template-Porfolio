@@ -52,19 +52,6 @@ const { shouldRenderComponent = true } = Astro.props;
 	}
 </style>
 
-<style>
-    ul li a {
-        @apply h-full flex items-center justify-center gap-x-1 rounded-lg font-medium duration-300 ease-in-out bg-smoke-800 hover:bg-smoke-700;
-    }
-
-    ul li a.active {
-        @apply text-smoke-900 bg-central-400;
-        svg {
-            @apply fill-smoke-900;
-        }
-    }
-</style>
-
 <script>
     
     document.addEventListener('DOMContentLoaded', function() {
