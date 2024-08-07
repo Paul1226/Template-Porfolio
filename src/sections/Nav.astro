@@ -2,6 +2,13 @@
 import Person from "../../public/icons/Person.astro";
 import Works from "../../public/icons/Works.astro";
 import NavServices from "../../public/icons/NavServices.astro";
+
+interface Props {
+    primero?: string
+    segundo?: string
+    tercero?: string
+}
+const { primero = "", segundo = "", tercero = "" } = Astro.props
 ---
 
 <nav
@@ -9,19 +16,25 @@ import NavServices from "../../public/icons/NavServices.astro";
 >
     <ul class="grid grid-cols-3 gap-x-2 h-full">
         <li>
-            <a class="link-nav active" href="/">
+            <a  
+                id={primero}
+                class="link-nav" href="/">
                 <Person class="w-5 fill-central-50" />
                 <span>About</span>
             </a>
         </li>
         <li>
-            <a class="link-nav" href="/Works" rel="noopener noreferrer">
+            <a
+                id={segundo}
+                class="link-nav" href="/Works" rel="noopener noreferrer">
                 <Works class="w-5 fill-central-50" />
                 <span>Works</span>
             </a>
         </li>
         <li>
-            <a class="link-nav" href="/Services" rel="noopener noreferrer">
+            <a 
+                id={tercero}
+                class="link-nav" href="/Services" rel="noopener noreferrer">
                 <NavServices class="w-5 fill-central-50" />
                 <span>Services</span>
             </a>
@@ -34,7 +47,7 @@ import NavServices from "../../public/icons/NavServices.astro";
         @apply h-full flex items-center justify-center gap-x-1 rounded-lg font-medium duration-300 ease-in-out bg-smoke-800 hover:bg-smoke-700;
     }
 
-    ul li a.active {
+    ul li a#active {
         @apply text-smoke-900 bg-central-400;
         svg {
             @apply fill-smoke-900;

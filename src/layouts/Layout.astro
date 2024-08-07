@@ -2,9 +2,12 @@
 interface Props {
 	title: string;
 	shouldRenderComponent?: boolean;
+	first?: string;
+	second?: string;
+	third?: string;
 }
 
-const { title } = Astro.props;
+const { title, shouldRenderComponent = true, first, second, third } = Astro.props;
 
 // fonts
 import '@fontsource-variable/manrope'; // 200 - 800
@@ -12,8 +15,6 @@ import '@fontsource-variable/manrope'; // 200 - 800
 // components
 import Footer from '../sections/Footer.astro';
 import Nav from '../sections/Nav.astro';
-
-const { shouldRenderComponent = true } = Astro.props;
 ---
 
 <!doctype html>
@@ -30,7 +31,7 @@ const { shouldRenderComponent = true } = Astro.props;
 		<div class="w-11/12 max-w-[400px] md:max-w-[870px] 2xl:max-w-[1422px] mx-auto py-4">
 			<main class="w-full h-full flex flex-col gap-3">
 				{
-					shouldRenderComponent && (<Nav />)
+					shouldRenderComponent && (<Nav primero={first} segundo={second} tercero={third} />)
 				}
 				<slot/>
 				<!-- <Footer/> -->
@@ -52,7 +53,7 @@ const { shouldRenderComponent = true } = Astro.props;
 	}
 </style>
 
-<script>
+<!-- <script>
     
     document.addEventListener('DOMContentLoaded', function() {
         const linksNav = document.querySelectorAll(".link-nav") as NodeListOf<HTMLAnchorElement>
@@ -77,4 +78,4 @@ const { shouldRenderComponent = true } = Astro.props;
             }
         })
     })
-</script>
+</script> -->
