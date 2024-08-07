@@ -47,7 +47,9 @@ import NavServices from "../../public/icons/NavServices.astro";
     document.addEventListener('DOMContentLoaded', function() {
         const linksNav = document.querySelectorAll(".link-nav") as NodeListOf<HTMLAnchorElement>
         function getHref() {
-            return window.location.pathname
+            let href = window.location.pathname
+            href.endsWith("/") ? href = href.slice(0, -1) : href
+            return href
         }
 
         linksNav.forEach(link => {
